@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="EncryptionDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xqi-gV-k1m">
+                                <rect key="frame" x="10" y="94" width="394" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Fzu-ai-Nh3"/>
+                                </constraints>
+                                <state key="normal" title="Generate Key Pair"/>
+                                <connections>
+                                    <action selector="generateKeyPair" destination="BYZ-38-t0r" eventType="touchUpInside" id="sss-bc-Isi"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4NC-SL-2b8">
+                                <rect key="frame" x="10" y="194" width="394" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="bGh-kw-KAM"/>
+                                </constraints>
+                                <state key="normal" title="Secret from keychain"/>
+                                <connections>
+                                    <action selector="SecretFromKeyChain" destination="BYZ-38-t0r" eventType="touchUpInside" id="tzz-IN-bIf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Fc-gH-n0E">
+                                <rect key="frame" x="10" y="294" width="394" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="wSz-Zz-eNA"/>
+                                </constraints>
+                                <state key="normal" title="Secret from 194 HEX strings"/>
+                                <connections>
+                                    <action selector="secretFromStringKeys" destination="BYZ-38-t0r" eventType="touchUpInside" id="SLI-GN-QmV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6EL-SA-lVt">
+                                <rect key="frame" x="10" y="384" width="394" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="c3L-oy-8m7"/>
+                                </constraints>
+                                <state key="normal" title="Secret from 64 HEX strings"/>
+                                <connections>
+                                    <action selector="secretFromStringKeysShort" destination="BYZ-38-t0r" eventType="touchUpInside" id="NTG-Md-cFa"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pVA-3o-D2j">
+                                <rect key="frame" x="10" y="484" width="394" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="AGc-mZ-xEu"/>
+                                </constraints>
+                                <state key="normal" title="Export keys"/>
+                                <connections>
+                                    <action selector="exportKeyPair" destination="BYZ-38-t0r" eventType="touchUpInside" id="nHp-eu-Nmp"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6EL-SA-lVt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="09E-aa-PM4"/>
+                            <constraint firstItem="4NC-SL-2b8" firstAttribute="top" secondItem="xqi-gV-k1m" secondAttribute="bottom" constant="50" id="5r1-r2-Gn6"/>
+                            <constraint firstItem="pVA-3o-D2j" firstAttribute="top" secondItem="6EL-SA-lVt" secondAttribute="bottom" constant="50" id="9os-N3-sxq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pVA-3o-D2j" secondAttribute="trailing" constant="10" id="JyJ-hR-cOI"/>
+                            <constraint firstItem="xqi-gV-k1m" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="MDB-E6-sk0"/>
+                            <constraint firstItem="4NC-SL-2b8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="eEf-dL-qPq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6EL-SA-lVt" secondAttribute="trailing" constant="10" id="elv-6B-DU1"/>
+                            <constraint firstItem="xqi-gV-k1m" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="gSQ-zv-PSt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9Fc-gH-n0E" secondAttribute="trailing" constant="10" id="hGh-zz-Y1D"/>
+                            <constraint firstItem="6EL-SA-lVt" firstAttribute="top" secondItem="9Fc-gH-n0E" secondAttribute="bottom" constant="40" id="hPr-cx-bXS"/>
+                            <constraint firstItem="pVA-3o-D2j" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="hbb-dS-ue1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4NC-SL-2b8" secondAttribute="trailing" constant="10" id="mLI-d6-ee9"/>
+                            <constraint firstItem="9Fc-gH-n0E" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="o80-qe-HY6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xqi-gV-k1m" secondAttribute="trailing" constant="10" id="qS4-Cz-0pB"/>
+                            <constraint firstItem="9Fc-gH-n0E" firstAttribute="top" secondItem="4NC-SL-2b8" secondAttribute="bottom" constant="50" id="xgZ-mm-c6O"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="93.75"/>
+        </scene>
+    </scenes>
+</document>
